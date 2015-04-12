@@ -1,0 +1,42 @@
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 22px;
+
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+
+    &.yellow {
+        background-color: @yellow;
+        color: black;
+
+        &:hover {
+            background-color: @yellowDarken;
+        }
+    }
+    &.blue {
+        background-color: @blue;
+        color: white;
+
+        &:hover {
+            background-color: @blueDarken;
+        }
+    }
+    i {
+        position: relative;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: 0 6px -2px 0;
+
+        &.download {
+            background: url('../images/download.svg') center center no-repeat;
+            background-size: 16px 16px;
+        }
+    }
+}

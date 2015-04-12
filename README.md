@@ -1,4 +1,5 @@
 # Cosmix
+Cosmix is a web audio editing platform designed to mix unique space-related sounds from NASA with a library of musical tracks. Cosmix was created by a team at Ingenology in Kansas City, MO., as part of the fourth annual NASA International Space Apps Challenge.
 
 ### Getting Started
 
@@ -57,3 +58,11 @@ You can grab the colored bar and drag to the left or right to position the start
 The gray bar on the second track in this example is your selection. You can Copy ( C ), Cut (X), Split (E), which will splice it at the beginning of your selection.
 
 You can’t cut from track 2 and paste into track 1. All work being done is specific to the track. 
+
+###Roadmap
+
+Features in the future are:
+
+* Naming and saving a song
+* Rendering engine
+* Export song to Soundcloud

@@ -7,19 +7,20 @@
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.png">
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.) styles/vendor.css -->
         <!-- bower:css -->
         <!-- endbower -->
         <!-- endbuild -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic" />
+        <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
@@ -29,98 +30,156 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Header -->
-        <section id="header" class="dark">
-            <header>
-                <div class="logo">
-                    <object type="image/svg+xml" data="images/logo.svg">Your browser does not support SVG</object>
-                </div>
-                <p>Houston, we have music.</p>
-            </header>
-            <footer>
-                <a href="#first" class="button scrolly">Proceed to second phase</a>
-            </footer>
-        </section>
-        
-    <!-- First -->
-        <section id="first" class="main">
-            <header>
-                <div class="container">
-                    <h2>Create your own intergalactic beats</h2>
-                    <p>Cosmix is a web audio editing platform designed to mix unique space-related sounds from NASA with a library of musical tracks.</p>
-                    <div class="screenshot">
-                        <img src="images/sample-screen-shot.png" title="Cosmix screenshot" />
-                    </div>
-                </div>
-            </header>
-            <div class="content dark style1 featured">
-                <div class="container">
-                    <div class="row">
-                        <div class="4u">
-                            <section>
-                                <span class="feature-icon"><span class="icon fa-wrench"></span></span>
-                                <header>
-                                    <h3>Build</h3>
-                                </header>
-                                <p>With Cosmix, you can create a custom track through the editor using a library of musical loops</p>
-                            </section>
-                        </div>
-                        <div class="4u">
-                            <section>
-                                <span class="feature-icon"><span class="icon fa-hand-o-up"></span></span>
-                                <header>
-                                    <h3>Interact</h3>
-                                </header>
-                                <p>Cosmix features unique space sounds and tracks from NASA's library - including interplanetary noise clips, rocket liftoffs, and audio from famous speeches and missions.</p>
-                            </section>
-                        </div>
-                        <div class="4u">
-                            <section>
-                                <span class="feature-icon"><span class="icon fa-play-circle"></span></span>
-                                <header>
-                                    <h3>Play</h3>
-                                </header>
-                                <p>Once you've created your custom space track, play it through the Cosmix platform.</p>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="12u">
-                            <footer>
-                                <a href="#" class="button">Start a mix</a>
-                            </footer>
-                        </div>
-                    </div>
-                </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <object type="image/svg+xml" data="images/logo.svg">Your browser does not support SVG</object>
             </div>
-        </section>
-
-    <!-- Fourth -->
-        <section id="fourth" class="main">
-            <header>
-                <div class="container">
-                    <h2>About Cosmix</h2>
-                    <p>Cosmix was created by a team at <a href="http://www.salvaorenick.com">Salva O'Renick</a> in Kansas City, MO., as part of the fourth annual <a href="http://www.spaceappschallenge.org">NASA International Space Apps Challenge.</a></p>
-                    <div class="logos">
-                        <img src="images/participant-logos.png" />
-                    </div>
-                </div>
-            </header>
-        </section>
-        
-    <!-- Footer -->
-        <section id="footer">
-            <ul class="icons">
-                <li><a href="http://twitter.com/cosmixclub" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <nav>
+                <ul>
+                    <li class="create"><a href="#create">Create</a></li>
+                    <li class="how"><a href="#how">How</a></li>
+                    <!--<li class="watch"><a href="#watch">Watch</a></li>-->
+                    <li class="about"><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <ul class="social">
                 <li><a href="http://facebook.com/cosmixclub" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="http://twitter.com/cosmixclub" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="https://github.com/ingenology/cosmix" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
             </ul>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="container">
+            <div class="banner-text">
+                <header>
+                    <strong>Houston,</strong><br />
+                </header>
+                <header class="sub-line">
+                    we have music.
+                </header>
+                <a href="#" onclick="return false;" class="button" title="Coming Soon...">Coming Soon...</a>
+                <!--<a href="app.html" class="button" title="Lets Make Something Great">Lets Make Something Great</a>-->
+            </div>
+        </div>
+    </section>
+    <section class="create">
+        <div class="container">
+            <aside>
+                <h2>Create your own intergalactic beats</h2>
+                <hr class="short" />
+                <p>Cosmix is a web audio editing platform designed to mix unique space-related sounds from NASA with a library of musical tracks.</p>
+                <!--<a href="app.html" class="button" title="Get Started">Get Started</a>-->
+            </aside>
+            <figure>
+                <img src="images/computer-image.png" title="Cosmix Screenshot" />
+            </figure>
+        </div>
+    </section>
+    <section class="how">
+        <article class="build">
+            <h2>Build</h2>
+            <hr class="short" />
+            <div class="expand-button">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="line cross"></div>
+            </div>
+            <div class="overlay">
+                <h2>Build</h2>
+                <hr class="short" />
+                <p>With Cosmix, you can create a custom track through the editor using a library of musical loops.</p>
+                <div class="bottom">
+                    <div class="cover"></div>
+                </div>
+            </div>
+        </article>
+        <article class="interact">
+            <h2>Interact</h2>
+            <hr class="short" />
+            <div class="expand-button">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="line cross"></div>
+            </div>
+            <div class="overlay">
+                <h2>Interact</h2>
+                <hr class="short" />
+                <p>Cosmix features unique space sounds and tracks from NASA's library &mdash; including interplanetary noise clips, rocket liftoffs, and audio from famous speeches and missions.</p>
+                <div class="bottom">
+                    <div class="cover"></div>
+                </div>
+            </div>
+        </article>
+        <article class="play">
+            <h2>Play</h2>
+            <hr class="short" />
+            <div class="expand-button">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="line cross"></div>
+            </div>
+            <div class="overlay">
+                <h2>Play</h2>
+                <hr class="short" />
+                <p>Once you've created your custom space track, play it through the Cosmix platform.</p>
+                <div class="bottom">
+                    <div class="cover"></div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!--
+    <section class="watch">
+        <figure></figure>
+        <aside>
+            <h2>Video copy goes here dolor set.</h2>
+            <hr class="short" />
+            <p>Lorem ipsum dolor sit amet, consecadipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+            <a href="#" class="button">Get Started</a>
+        </aside>
+    </section>
+    -->
+    <section class="about">
+        <h2>About Cosmix</h2>
+        <hr class="short" />
+        <p>Cosmix was created by a team at Salva O'Renick in Kansas City, MO., as part of the fourth annual NASA International Space Apps Challenge.</p>
+        <div class="logos">
+            <div class="logo">
+                <a href="http://salvaorenick.com" target="_blank">
+                    <img class="so" src="images/so-logo.svg" title="Salva O'Renick" />
+                </a>
+            </div>
+            <div class="logo">
+                <a href="https://2015.spaceappschallenge.org/" target="_blank">
+                    <img class="space-apps" src="images/space-apps-logo.svg" title="NASA Space Apps Challenge" />
+                </a>
+            </div>
+            <div class="logo">
+                <a href="https://nasa.gov/" target="_blank">
+                    <img class="nasa" src="images/nasa-logo.svg" title="NASA" />
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <object type="image/svg+xml" data="images/logo.svg">Your browser does not support SVG</object>
+            </div>
             <div class="copyright">
-                <ul class="menu">
-                    <li>&copy; 2015 Cosmix. All rights reserved.</li><li><a href="http://cosmix.club">Cosmix</a></li>
+               &copy; 2015 Cosmix. All rights reserved. Cosmix
+            </div> 
+            <div class="social-icons">
+                <ul class="social">
+                    <li><a href="http://facebook.com/cosmixclub" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="http://twitter.com/cosmixclub" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://github.com/ingenology/cosmix" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
                 </ul>
             </div>
-        </section>
+        </div>
+    </footer>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -137,11 +196,6 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-
-    <!-- build:js({app,.tmp}) scripts/plugins.js -->
-    <script src="scripts/skeleton.min.js"></script>
-    <script src="scripts/jquery.scrolly.min.js"></script>
-    <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/landing-main.js -->
         <script src="scripts/landing-main.js"></script>

@@ -26,8 +26,10 @@ define([
         className: 'track-controls',
 
         template: _.template(
-            '<button class="btn mute {{ muted }}" data-toggle="button" title="mute">M</button>' +
-            '<button class="btn solo {{ solo }}" data-toggle="button" title="solo">S</button>' +
+            '<div class="control-holder">' +
+            '<button class="control mute {{ muted }}" type="button" data-toggle="button" title="Mute this track"><span aria-hidden="true"></span> Mute</button>' +
+            '<button class="control solo {{ solo }}" type="button" data-toggle="button" title="Solo this track"><span aria-hidden="true"></span> Solo</button>' +
+            '</div>' +
             '<input type="range" class="volume" value="{{ gain }}" title="volume">'
         ),
 
@@ -50,7 +52,7 @@ define([
                 solo: solo
             }));
 
-            $(this.el).find('.btn').button();
+            $(this.el).find('.control').button();
 
             return this;
         },

@@ -40,7 +40,7 @@ define([
             this.moving = false;
             
             // rewrite title tag with proper project name value
-            $('title').text(this.model.get('name') + ' :: Audiee');
+            // $('title').text(this.model.get('name') + ' :: Audiee');
 
             // window resize listener
             $(window).on('resize', this.resizeView);            
@@ -59,7 +59,7 @@ define([
 
         resizeView: function() {
             var $editorView = $(this.el),
-                height = $(window).height() - $editorView.position().top
+                height = $(window).height() - $editorView.offset().top
                             - parseInt($editorView.css('margin-top'));
 
             $editorView.height(height);

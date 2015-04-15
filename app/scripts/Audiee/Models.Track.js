@@ -20,14 +20,14 @@ define([
 		// default attributes
 		defaults: {
 			name: 'Untitled',
-			color: '#00a0b0',
+			color: 'transparent',
 			gain: 1,
 			pan: 0.5,
 			muted: false,
 			solo: false,
 			// allow minimalization (view purpose)?
 			// minimalized: false,
-			length: 1920		// 32 minutes (default length)
+			length: 2400		// 4 minutes (default length)
 		},
 
 		// initialization

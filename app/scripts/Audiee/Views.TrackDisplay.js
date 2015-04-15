@@ -68,7 +68,7 @@ define([
         renderDisplay: function() {
             var width = Audiee.Display.sec2px(this.model.get('length')),
                 maxWidth = this.maxWidth,
-                height = 100,
+                height = 84,
                 $el = $(this.el),
                 $wrapperV = $el.find(this.wrapperClass);
 

@@ -26,7 +26,7 @@ define([
 
     return Backbone.View.extend({
         // parent DOM element
-        el: $('#menu-view ul.nav'),
+        el: $('#menu-view'),
 
         // cached template function
         template: _.template(MenuT),

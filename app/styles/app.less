@@ -431,24 +431,14 @@ body.app {
     background: url('../images/app-background.jpg') center center no-repeat;
     background-size: cover;
     padding-top: 0;
+    line-height: normal;
 
     font-family: 'Abel', 'Helvetica', sans-serif;
 
     // imports /////
+    @import "imports/mixins.less";
+    @import "font-awesome/less/font-awesome.less";
     @import "imports/buttons.less";
-    ////////////////
-
-    // mixins //////
-    .clearfix {
-        &:before, &:after {
-            display: table;
-            line-height: 0;
-            content: "";
-        }
-        &:after {
-            clear: both;
-        }
-    }
     ////////////////
 
     .container {
@@ -480,73 +470,15 @@ body.app {
             }
         }
     }
-    .play-controls {
-        position: relative;
-        width: 100%;
-        padding-top: 10px;
-        .clearfix;
-
-        button {
-            border: 0;
-            padding: 0;
-            outline: 0;
-            background: 0;
-            cursor: pointer;
-        }
-        .play-button, .pause-button, .stop-button {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-        }
-        .play-button {
-
-            svg circle {
-                -webkit-transition: opacity 0.2s ease;
-                -mox-transition: opacity 0.2s ease;
-                transition: opacity 0.2s ease;
-            }
-
-            &:hover {
-                
-                svg circle {
-                    opacity: 0.5;
-                }
-            }
-        }
-        .pause-button, .stop-button {
-            margin-left: 10px;
-            
-            svg circle {
-                -webkit-transition: opacity 0.2s ease;
-                -mox-transition: opacity 0.2s ease;
-                transition: opacity 0.2s ease;
-            }
-            &:hover {
-                
-                svg circle {
-                    opacity: 0.5;
-                }
-            }
-        }
-        #time-display {
-            position: relative;
-            float: right;
-            color: white;
-            outline: 0;
-            border: 0;
-            background: transparent;
-            text-align: right;
-            box-shadow: none;
-            height: 40px;
-            font-size: 30px;
-
-            &:focus {
-                box-shadow: none;
-            }
-        }
-    }
-
     
+    /* #Play Controls
+    ================================================== */
+    
+    @import "imports/play-controls.less";
+
+    /* #Timeline
+    ================================================== */
+    
+    @import "imports/timeline.less";
 }
 

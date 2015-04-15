@@ -93,16 +93,145 @@
                 <div class="inner">
                     <div id="time-line"></div>
                     <div id="tracks"></div>
-                </div> 
+                </div>
             </div>
-        </div> 
+        </div>
     </div>
     
     <!-- NATHAN ADD CODE HERE -->
-
+    <div id="app-tracks-listing">
+        <div class="container">
+            <span class="tracks"><i class="fa fa-bars"></i> Track Library</span>
+            <ul>
+                <li class="category">
+                    NASA Sounds
+                    <ul>
+                        <li>
+                            NASA Sounds
+                        </li>
+                        <li>
+                            Bass Loops
+                        </li>
+                        <li>
+                            Beats
+                        </li>
+                        <li>
+                            Vocals
+                        </li>
+                    </ul>
+                </li>
+                <li class="category">
+                    Bass Loops
+                    <ul>
+                        <li>
+                            Bass Loops
+                        </li>
+                        <li>
+                            NASA Sounds
+                        </li>
+                        <li>
+                            Bass Loops
+                        </li>
+                        <li>
+                            Beats
+                        </li>
+                        <li>
+                            Vocals
+                        </li>
+                    </ul>
+                </li>
+                <li class="category">
+                    Beats
+                    <ul>
+                        <li>
+                            Beats
+                        </li>
+                        <li>
+                            NASA Sounds
+                        </li>
+                        <li>
+                            Bass Loops
+                        </li>
+                        <li>
+                            Beats
+                        </li>
+                        <li>
+                            Vocals
+                        </li>
+                    </ul>
+                </li>
+                <li class="category">
+                    Vocals
+                    <ul>
+                        <li>
+                            Vocals
+                        </li>
+                        <li>
+                            NASA Sounds
+                        </li>
+                        <li>
+                            Bass Loops
+                        </li>
+                        <li>
+                            Beats
+                        </li>
+                        <li>
+                            Vocals
+                        </li>
+                        <li>
+                            NASA Sounds
+                        </li>
+                        <li>
+                            Bass Loops
+                        </li>
+                        <li>
+                            Beats
+                        </li>
+                        <li>
+                            Vocals
+                        </li>
+                        <li>
+                            NASA Sounds
+                        </li>
+                        <li>
+                            Bass Loops
+                        </li>
+                        <li>
+                            Beats
+                        </li>
+                        <li>
+                            Vocals
+                        </li>
+                        <li>
+                            NASA Sounds
+                        </li>
+                        <li>
+                            Bass Loops
+                        </li>
+                        <li>
+                            Beats
+                        </li>
+                        <li>
+                            Vocals
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
     <!-- ******************** -->
 
     <!-- JavaScript at the bottom for fast page loading -->
     <script data-main="scripts/app-main" src="scripts/libs/require/require.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script>
+        $('.tracks').on('click', function () {
+            $(this).next('ul').toggleClass('show');
+        });
+        $('ul > li.category').on('click', function () {
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        });
+    </script>
 </body>
 </html>

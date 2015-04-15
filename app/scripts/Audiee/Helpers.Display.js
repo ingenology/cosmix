@@ -163,7 +163,7 @@ define([
 
         Display.prototype.drawSelection = function(canvas, from, length) {
             var ctx = canvas.getContext('2d');
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
             ctx.fillRect(from, 0, length, canvas.height);
         };    
 
@@ -178,7 +178,7 @@ define([
                 editorScroll = Audiee.Views.Editor.el.scrollLeft();
 
             Audiee.Views.PlaybackControls.updateTime(this.px2sec(position));
-            position += 120;  // track controls width
+            position += 250;  // track controls width
 
             $cursor.height(tracksCount * trackHeight)
                    .css('left', position + 'px')
@@ -190,7 +190,7 @@ define([
             }*/
             
             if (this.playbackCursorFollowing && ((position > (editorScroll + editorWidth)) || position < editorScroll)) {
-                Audiee.Views.Editor.el.scrollLeft(position - 120);
+                Audiee.Views.Editor.el.scrollLeft(position - 250);
             }
         };
 

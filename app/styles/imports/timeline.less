@@ -1,12 +1,16 @@
+@trackHeight: 104px;
 
 #app-frame {
     position: relative;
     margin-top: 30px;
 
+    .container {
+        overflow: hidden;
+    }
     #editor-view {
         position: relative;
         overflow: scroll;
-        margin-top: 100px;
+        margin-top: 0;
         background-color: transparent;
 
         -webkit-touch-callout: none;
@@ -19,11 +23,174 @@
         #time-line {
             width: 100%;
             height: 30px;
-            margin-left: 120px;
+            margin-left: 250px;
             position: fixed;
-            top: 160px;
-            background-color: #eeeeee;
+            top: 147px !important;
+            background-color: transparent;
             z-index: 500;
+        }
+        .track {
+            height: @trackHeight;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .track-info {
+                width: 250px;
+                max-height: 104px;
+                background-color: rgba(0,0,0,0.6);
+
+                .track-name {
+                    width: 250px;
+                    background: none;
+                    padding: 4px 10px 0px 10px;
+                    .border-box;
+
+                    &.editing {
+
+                        .display {
+                            display: block;
+
+                            .name-content {
+                                display: none;
+                            }
+                        }
+                        .edit {
+                            display: block;
+                            padding: 0 0 0 6px;
+                        }
+                    }
+
+                    .name-input {
+                        font-family: 'Abel', 'Helvetica', sans-serif;
+                        font-weight: 200;
+                        color: white;
+                        font-size: 26px;
+                        height: 26px;
+                        padding: 0;
+                        margin: 0;
+                        border: 0;
+                        font-style: normal;
+                        color: @yellow;
+                    }
+                    .display {
+                        font-family: 'Abel', 'Helvetica', sans-serif;
+
+                        .track-number {
+                            position: relative;
+                            padding: 6px;
+                            color: @blue;
+                            font-size: 14px;
+                        }
+                        label {
+                            font-family: 'Abel', 'Helvetica', sans-serif;
+                            font-weight: 200;
+                            color: white;
+                            font-size: 26px;
+                            line-height: normal;
+                            padding: 0 0 0 6px;
+                            height: 26px;
+
+                        }
+                    }
+                }
+                .track-controls {
+                    height: 74px;
+                    width: 250px;
+                    padding: 10px;
+                    .border-box;
+
+                    .control-holder {
+                        position: relative;
+                        display: block;
+
+                        .control {
+                            position: relative;
+                            display: inline-block;
+                            border: 0;
+                            outline: 0;
+                            padding: 3px;
+                            background-color: transparent;
+
+                            font-family: 'Abel', 'Helvetica', sans-serif;
+                            color: white;
+
+                            span {
+                                display: inline-block;
+                                height: 20px;
+                                width: 20px;
+                                margin-bottom: -4px;
+                            }
+                            &.mute {
+
+                                span {
+                                    background: url('../images/mute-sprite.png') center top no-repeat;
+                                }
+                            }
+                            &.solo {
+
+                                span {
+                                    background: url('../images/solo-sprite.png') center top no-repeat;
+                                }
+                            }
+                            &.active {
+
+                                &.mute {
+
+                                    span {
+                                        background-position: center bottom;
+                                    }
+                                }
+                                &.solo {
+
+                                    span {
+                                        background-position: center bottom;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    input.volume {
+                        width: 100px;
+                        margin: 0 6px;
+                        background: url('../images/volume-background.png') left center repeat-x transparent;
+                        background-size: 1px 1px;
+                        border: 0;
+                        padding: 0;
+                        outline: 0;
+
+                        &:focus {
+                            border: 0;
+                            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(82, 168, 236, 0);
+                        }
+                    }
+                }
+            }
+            .track-display {
+                height: @trackHeight;
+                margin-left: 250px;
+                background-color: rgba(255,255,255,0.4);
+                // overflow: hidden;
+
+                .display-wrapper {
+                    height: 84px;
+                }
+                .clip {
+                    height: @trackHeight;
+                    border: 1px solid white;
+                    .border-box;
+
+                    .clip-name {
+                        background-color: @blue;
+                        border: 0;
+                    }
+                    .clip-display {
+                        height: 84px;
+                    }
+                }
+            }
         }
     }
 }

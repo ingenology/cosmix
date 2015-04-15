@@ -71,7 +71,7 @@ Features in the future are:
 
 Cosmix was built off a fork of the [Web Audio Editor](https://github.com/janmyler/web-audio-editor) project by [Jan Myler](https://github.com/janmyler).
 
-Audio resources are a mixture of NASA Space Sounds as well as loops from Looper Man.
+Audio resources are a mixture of NASA Space Sounds as well as loops from [Looper Man](www.looperman.com).
 
 Space sounds were found:
 

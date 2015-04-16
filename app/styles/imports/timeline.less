@@ -21,7 +21,7 @@
         user-select: none;
 
         #time-line {
-            width: 100%;
+            width: 890px;
             height: 30px;
             margin-left: 250px;
             position: fixed;
@@ -29,7 +29,18 @@
             background-color: transparent;
             z-index: 500;
         }
+        #playback-position {
+            width: 1px;
+            position: absolute;
+            top: 0;
+            background-color: white;
+            z-index: 500;
+        }
+        .active .track-display {
+            background-color: #fff;
+        }
         .track {
+            position: relative;
             height: @trackHeight;
             margin-bottom: 10px;
 
@@ -37,10 +48,23 @@
                 margin-bottom: 0;
             }
 
+            /* GLOBAL STYLES :: DONT TOUCH */
+            .editing .display, .edit {
+                display: none;
+            }
+            .editing .edit {
+                display: block;
+            }
+            /* =========================== */
+
             .track-info {
+                position: relative;
+                float: left;
                 width: 250px;
                 max-height: 104px;
                 background-color: rgba(0,0,0,0.6);
+                overflow: hidden;
+                z-index: 550;
 
                 .track-name {
                     width: 250px;
@@ -62,18 +86,20 @@
                             padding: 0 0 0 6px;
                         }
                     }
-
                     .name-input {
                         font-family: 'Abel', 'Helvetica', sans-serif;
                         font-weight: 200;
                         color: white;
                         font-size: 26px;
                         height: 26px;
-                        padding: 0;
+                        padding: 0 0 6px;
                         margin: 0;
                         border: 0;
                         font-style: normal;
                         color: @yellow;
+                        background-color: transparent;
+                        outline: none;
+                        box-shadow: none;
                     }
                     .display {
                         font-family: 'Abel', 'Helvetica', sans-serif;
@@ -169,25 +195,95 @@
                 }
             }
             .track-display {
+                position: relative;
                 height: @trackHeight;
                 margin-left: 250px;
                 background-color: rgba(255,255,255,0.4);
-                // overflow: hidden;
+                
+                // changes the cursor when the clip is moving
+                .ui-draggable-dragging, .ui-resizable-resizing {
+                    z-index: 500;
+                    .clip-display {
+                        background: hsla(0, 0%, 60%, 0.6);
+                    }        
+                }
+                .ui-draggable-dragging {
+                    .name-content {
+                        cursor: move !important;
+                    }
+                }
+                //
 
                 .display-wrapper {
                     height: 84px;
+                    position: absolute;
+                    top: 20px;
+                    background-color: hsla(0, 0%, 78%, 0.2);
+                    z-index: 200;
+
+                    canvas {
+                        float: left;          
+                    }
                 }
                 .clip {
                     height: @trackHeight;
                     border: 1px solid white;
+                    position: absolute;
+                    overflow: hidden;
                     .border-box;
 
                     .clip-name {
                         background-color: @blue;
                         border: 0;
+
+                        .name-content {
+                            height: 16px;
+                            overflow: hidden;
+                            margin-bottom: 0;
+                            padding: 0 2px 2px; 
+                            white-space: nowrap;  
+                            cursor: default;         
+                        }
+                        .edit {
+                            height: 18px;
+                        }
+                        .name-input {
+                            margin: -4px 0 0 1px;         
+                            padding: 0;
+                            border: none;
+                            background: transparent;
+                            box-shadow: none;
+                            font-style: italic;
+                        }
                     }
                     .clip-display {
                         height: 84px;
+                        border-left: 1px solid white;
+                        border-right: 1px solid white;
+
+                        canvas {
+                            float: left;
+                            margin-left: -1px;
+                        }
+                    }
+
+                    .ui-resizable-handle {
+                        width: 5px;
+                        height: 20px;
+                        position: absolute;
+                        top: 0;
+                        z-index: 500;
+                    }
+                    .ui-resizable-handle:hover {
+                        background: rgba(255, 255, 255, 0.6);
+                    }
+                    .ui-resizable-w {
+                        left: 0;
+                        cursor: w-resize;
+                    }
+                    .ui-resizable-e {
+                        right: 0;
+                        cursor: e-resize;
                     }
                 }
             }

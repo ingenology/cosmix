@@ -21,13 +21,17 @@
         user-select: none;
 
         #time-line {
-            width: 890px;
+            width: 640px;
             height: 30px;
             margin-left: 250px;
             position: fixed;
             top: 147px !important;
             background-color: transparent;
             z-index: 500;
+
+            canvas {
+                overflow: hidden;
+            }
         }
         #playback-position {
             width: 1px;

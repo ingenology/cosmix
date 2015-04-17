@@ -342,7 +342,8 @@ module.exports = function (grunt) {
             'scripts/app.js',
             'scripts/Audiee/*',
             'scripts/libs/*',
-            'scripts/templates/*'
+            'scripts/templates/*',
+            'track-library/*'
           ]
         }]
       }

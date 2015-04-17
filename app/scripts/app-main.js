@@ -21,7 +21,8 @@ require.config({
 		// plugins
 		text 		: 'libs/require/text',
 		order		: 'libs/require/order',
-		plugins		: 'libs/bootstrap'
+		plugins		: 'libs/bootstrap',
+		filer  		: 'libs/filer/filer.min'
 	},
 });
 

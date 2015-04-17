@@ -208,7 +208,10 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/index.html']
+        src: [
+          '<%= config.app %>/index.html',
+          '<%= config.app %>/app.html'
+        ]
       },
       less: {
         src: ['<%= config.app %>/styles/{,*/}*.less'],
@@ -236,7 +239,7 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: '<%= config.app %>/index.html'
+      html: '<%= config.app %>/*.html'
     },
 
      // Performs rewrites based on rev and the useminPrepare configuration
@@ -341,9 +344,9 @@ module.exports = function (grunt) {
             'scripts/app-main.js',
             'scripts/app.js',
             'scripts/Audiee/*',
-            'scripts/libs/*',
+            'scripts/libs/**',
             'scripts/templates/*',
-            'track-library/*'
+            'track-library/**'
           ]
         }]
       }

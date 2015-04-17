@@ -69,7 +69,7 @@ define([
 
             // prepare the context
             ctx.fillStyle = '#FFF';
-            ctx.font="0.8em sans-serif";
+            ctx.font="0.8em 'Abel', 'Helvetica', sans-serif";
             ctx.clearRect(0, 0, width, height);
 
             // draw only sub ticks first

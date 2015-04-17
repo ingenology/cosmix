@@ -33,12 +33,13 @@ define(function(require) {
 		TracksV = require('Audiee/Views.Tracks'),
 		MenuV = require('Audiee/Views.Menu'),
 		TimelineV = require('Audiee/Views.Timeline'),
+		TrackPickerV = require('Audiee/Views.TrackPicker'),
 
 	// templates
 		AlertT = require('text!templates/AlertModal.html');
 
 	// plugins without reference
-		require('plugins/modal');
+		require('filer');
 
 
 	// Audiee global object
@@ -49,6 +50,8 @@ define(function(require) {
 	};
 	Audiee.Display = new DisplayH;
 	Audiee.Player = new PlayerH;
+	var filer = new Filer();
+	filer.init();
 
 	// application initialization
 	var init = function() {
@@ -79,6 +82,8 @@ define(function(require) {
 			model: Audiee.Models.Project
 		});
 
+		Audiee.Views.TrackPicker = new TrackPickerV; // track drawer
+
 		if (typeof webkitAudioContext !== 'undefined' || typeof AudioContext !== 'undefined') 
 			Audiee.Views.Menu = new MenuV;			// show menu only if app is supported
 		/*
@@ -94,6 +99,9 @@ define(function(require) {
 			return 'By leaving this page, all changes will be lost.';
 		};
 		*/
+
+		// Filer initialization
+		window.filer = filer;
 	};
 	
 	return {	

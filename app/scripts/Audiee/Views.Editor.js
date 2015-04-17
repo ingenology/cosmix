@@ -60,7 +60,7 @@ define([
         resizeView: function() {
             var $editorView = $(this.el),
                 height = $(window).height() - $editorView.offset().top
-                            - parseInt($editorView.css('margin-top')) - 40;
+                            - parseInt($editorView.css('margin-top')) - 60;
 
             $editorView.height(height);
         },

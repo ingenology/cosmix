@@ -337,7 +337,12 @@ module.exports = function (grunt) {
             'images/{,*/}*.webp',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*',
-            'styles/font-awesome/fonts{,*/}*.*'
+            'styles/font-awesome/fonts{,*/}*.*',
+            'scripts/app-main.js',
+            'scripts/app.js',
+            'scripts/Audiee/*',
+            'scripts/libs/*',
+            'scripts/templates/*'
           ]
         }]
       }
@@ -407,7 +412,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
-    'filerev',
+    // 'filerev',
     'usemin',
     'htmlmin'
   ]);

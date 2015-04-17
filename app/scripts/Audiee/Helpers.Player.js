@@ -169,6 +169,9 @@ define([
             this.gainNodes[cid].gain.value = volume;
         };
 
+        /* THIS IS THE OLD FUNCTION; SAVING IT FOR LATER
+        *
+        *
         // NOTE: Maybe move to different module...
         Player.prototype.loadFile = function(file, el) {
             var reader = new FileReader,
@@ -218,6 +221,30 @@ define([
             };
 
             reader.readAsArrayBuffer(file);
+        };
+        */
+
+        Player.prototype.loadFile = function(file, el) {
+            var reader = new FileReader,
+                fileTypes = ['audio/mpeg', 'audio/mp3', 'audio/wave', 'audio/wav'],
+                that   = this;
+
+            if (fileTypes.indexOf(file.type) < 0) {
+                throw('Unsupported file format!');
+            }
+
+            reader.onload = function(e) {
+                console.log(e);
+
+                var onsuccess = function(audioBuffer) {
+                    console.log(el);
+                    $(el).trigger('Audiee:fileLoaded', [audioBuffer, file]);
+                };
+                that.context.decodeAudioData(e.target.result, onsuccess);
+            };
+
+            reader.readAsArrayBuffer(file);
+
         };
 
         return Player;

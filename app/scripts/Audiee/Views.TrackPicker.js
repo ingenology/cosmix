@@ -1,3 +1,15 @@
+/**
+ * View for the Track Selection drawer
+ *
+ * @file        Views.TrackPicker.js
+ * @author      Doug Niccum <dniccumdesign[at]gmail.com>
+ * @copyright   Copyright 2015, Doug Niccum (http://dniccumdesign.com)
+ * @license     MIT License (http://www.opensource.org/licenses/mit-license.php)
+ *
+ * Licensed under The MIT License
+ * Redistributions of files must retain the above copyright notice.
+ */
+
 define([
     'underscore',
     'backbone',

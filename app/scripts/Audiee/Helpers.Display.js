@@ -180,7 +180,7 @@ define([
             Audiee.Views.PlaybackControls.updateTime(this.px2sec(position));
             position += 250;  // track controls width
 
-            $cursor.height(tracksCount * trackHeight)
+            $cursor.height(tracksCount * trackHeight + ((tracksCount - 1) * 10))
                    .css('left', position + 'px')
                    .show();
 

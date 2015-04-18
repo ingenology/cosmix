@@ -124,7 +124,7 @@ define([
                         Audiee.Player.loadFile(file, $('#menu-view'));
                     });
                 } else {
-                    this.uploadFile(directory + track, track);   
+                    Audiee.Views.TrackPicker.uploadFile(directory + track, track);   
                 }
             });
             

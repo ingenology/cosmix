@@ -3,11 +3,11 @@
 @import "imports/reset.less";
 
 /**
- * Primary CSS for Audiee
+ * Primary styles for Cosmix
  *
- * @file        style.less
- * @author      Jan Myler <honza.myler[at]gmail.com>
- * @copyright   Copyright 2012, Jan Myler (http://janmyler.com)
+ * @file        app.less
+ * @author      Doug Niccum <dniccumdesign[at]gmail.com>
+ * @copyright   Copyright 2015, Doug Niccum (http://dniccumdesign.com)
  * @license     MIT License (http://www.opensource.org/licenses/mit-license.php)
  *
  * Licensed under The MIT License
@@ -36,7 +36,20 @@ body.app {
     @import "imports/buttons.less";
     @import "imports/context-menu.less";
     @import "imports/scroll-bar.less";
+    @import "imports/modal.less";
     ////////////////
+
+    /* #Global Text
+    ================================================== */
+
+    h3 {
+        color: @blue;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    /* #Global Styles
+    ================================================== */
 
     .container {
         position: relative;

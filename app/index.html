@@ -40,7 +40,7 @@
                 <ul>
                     <li class="create"><a href="#create">Create</a></li>
                     <li class="how"><a href="#how">How</a></li>
-                    <!--<li class="watch"><a href="#watch">Watch</a></li>-->
+                    <li class="watch"><a href="#watch">Watch</a></li>
                     <li class="about"><a href="#about">About</a></li>
                 </ul>
             </nav>
@@ -130,17 +130,19 @@
             </div>
         </article>
     </section>
-    <!--
     <section class="watch">
-        <figure></figure>
+        <figure>
+            <div class="video" id="video-wrapper">
+                <iframe src="https://player.vimeo.com/video/125344657" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </figure>
         <aside>
-            <h2>Video copy goes here dolor set.</h2>
+            <h2>Watch the building of Cosmix</h2>
             <hr class="short" />
-            <p>Lorem ipsum dolor sit amet, consecadipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-            <a href="#" class="button">Get Started</a>
+            <p>Watch and listen to the inspiration behind Cosmix and the team that created it.</p>
+            <a href="app.html" class="button" title="Get Started">Get Started</a>
         </aside>
     </section>
-    -->
     <section class="about">
         <h2>About Cosmix</h2>
         <hr class="short" />
@@ -184,6 +186,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fitvids/jquery.fitvids.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

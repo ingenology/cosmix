@@ -1,0 +1,63 @@
+/* #Modal
+================================================== */
+.modal {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: none;
+
+	.overlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.8);
+	}
+	.modal-holder {
+		position: relative;
+		padding: 40px;
+		width: 600px;
+		top: 20%;
+		margin: 0 auto;
+		background-color: white;
+		.border-box;
+
+		p {
+			font-size: 20px;
+			color: @grey;
+			line-height: 130%;
+			margin-bottom: 20px;
+
+			strong {
+				font-weight: 600;
+			}
+		}
+	}
+	&#browser-disclaimer {
+
+		.modal-holder {
+			.clearfix;
+
+			.graphic {
+				position: relative;
+				width: 210px;
+				float: left;
+			}
+			.content {
+				position: relative;
+				width: 270px;
+				float: right;
+
+				p {
+					strong {
+						color: @blueDarken;
+					}
+				}
+			}
+		}
+	}
+}

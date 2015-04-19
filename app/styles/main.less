@@ -468,22 +468,26 @@ body.landing {
 
     section.watch {
         position: relative;
-        height: 670px;
+        background-color: @grey;
+        .clearfix;
 
         figure {
-            position: absolute;
-            height: 100%;
+            position: relative;
             width: 66.6666%;
-            left: 0;
-            background: url('../images/video-background.jpg') center center no-repeat;
-            background-size: cover;
+            float: left;
+            background-color: black;
+
+            .video {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
         }
         aside {
-            position: absolute;
+            position: relative;
             width: 33.3334%;
-            height: 100%;
-            right: 0;
-            padding: 100px 30px;
+            float: right;
+            padding: 5% 30px;
             background-color: @grey;
             .border-box;
 
@@ -659,6 +663,11 @@ body.landing {
                 width: 700px;
             }
         }
+        section.watch {
+            .video {
+                padding: 10% 0;
+            }
+        }
     
     }
 
@@ -701,6 +710,17 @@ body.landing {
             }
             figure {
                 width: 580px;
+            }
+        }
+        section.watch {
+            
+            .video {
+                padding: 15% 0;
+            }
+            aside {
+                p {
+                    font-size: 18px;
+                }
             }
         }
         section.how {
@@ -834,6 +854,10 @@ body.landing {
             
             figure {
                 width: 50%;
+
+                .video {
+                    padding: 30% 0;
+                }
             }
             aside {
                 width: 50%;
@@ -913,6 +937,7 @@ body.landing {
             aside {
                 float: none;
                 width: 100%;
+                margin-bottom: 60px;
             }
             figure {
                 float: none;
@@ -953,7 +978,6 @@ body.landing {
             
             figure {
                 position: relative;
-                padding: 20px 0;
                 width: 100%;
             }
             aside {

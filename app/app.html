@@ -98,7 +98,30 @@
     </div>
     <div id="app-tracks-listing"></div>
 
+    <div id="browser-disclaimer" class="modal">
+        <div class="overlay"></div>
+        <div class="modal-holder">
+            <div class="graphic">
+                <img src="images/graphic_shuttle.png" />
+            </div>
+            <div class="content">
+                <h3>Browser Compatibility</h3>
+                <p>Cosmix requires the most recent version of the <strong>Chrome Browser</strong> to run properly. Click the button below to download.</p>
+                <a href="http://www.google.com/chrome/" target="_blank" title="Download Google Chrome" class="button blue"><i class="download"></i> Download</a>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript at the bottom for fast page loading -->
     <script data-main="scripts/app-main" src="scripts/libs/require/require.js"></script>
+    <script src="scripts/libs/jquery/jquery.js"></script>
+    <script type="text/javascript">
+        // Browser test
+        $(document).ready(function() {
+            if (!window.requestFileSystem) {
+                $('#browser-disclaimer').show();
+            }
+        });
+    </script>
 </body>
 </html>

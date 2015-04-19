@@ -118,6 +118,7 @@
     <script type="text/javascript">
         // Browser test
         $(document).ready(function() {
+            window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
             if (!window.requestFileSystem) {
                 $('#browser-disclaimer').show();
             }

@@ -13,6 +13,10 @@ $('.expand-button').click(function() {
 	}
 });
 
+$(document).ready(function() {
+	$('#video-wrapper').fitVids();
+});
+
 $(document).scroll(function(){
 	'use strict';
 
@@ -20,9 +24,8 @@ $(document).scroll(function(){
 	var header = $('body > header').outerHeight();
 	var create = $('section.create').offset().top - header;
 	var how = $('section.how').offset().top - header;
-	// var watch = $('section.watch').offset().top - header;
+	var watch = $('section.watch').offset().top - header;
 	var about = $('section.about').offset().top - header;
-	/*
 	if (o >= create && o < how && !$('nav li.create').hasClass('active')) {
 		$('nav li').removeClass('active');
 		$('nav li.create').addClass('active');
@@ -32,19 +35,6 @@ $(document).scroll(function(){
 	} else if (o >= watch && o < about && !$('nav li.watch').hasClass('active')) {
 		$('nav li').removeClass('active');
 		$('nav li.watch').addClass('active');
-	} else if (o >= about && !$('nav li.about').hasClass('active')) {
-		$('nav li').removeClass('active');
-		$('nav li.about').addClass('active');
-	} else if (o < create) {
-		$('nav li').removeClass('active');
-	}
-	*/
-	if (o >= create && o < how && !$('nav li.create').hasClass('active')) {
-		$('nav li').removeClass('active');
-		$('nav li.create').addClass('active');
-	} else if (o >= how && o < about && !$('nav li.how').hasClass('active')) {
-		$('nav li').removeClass('active');
-		$('nav li.how').addClass('active');
 	} else if (o >= about && !$('nav li.about').hasClass('active')) {
 		$('nav li').removeClass('active');
 		$('nav li.about').addClass('active');
